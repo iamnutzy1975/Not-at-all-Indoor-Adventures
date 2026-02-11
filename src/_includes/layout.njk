@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{ title }} | Not At All Indoor Adventures</title>
+    
+    <meta name="description" content="Expert fishing guiding in Nipigon, Ontario. Specializing in trophy Brook Trout and Lake Trout adventures.">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    
+    <style>
+        /* Small tweak to make the header stand out without adding bloat */
+        header { border-bottom: 1px solid #e1e1e1; margin-bottom: 2rem; }
+        footer { margin-top: 3rem; padding: 2rem 0; border-top: 1px solid #e1e1e1; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <header class="container">
+        <nav>
+            <ul>
+                <li><strong>?? Not At All Indoor Adventures</strong></li>
+            </ul>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/trips">Trips</a></li>
+                <li><a href="/species">Species</a></li>
+                <li><a href="/reports">Reports</a></li>
+                <li><a href="/contact" class="contrast">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article>
+            {{ content | safe }}
+        </article>
+    </main>
+
+    <footer class="container">
+        <div class="grid">
+            <div>
+                <strong>Not At All Indoor Adventures</strong><br>
+                Nipigon, Ontario, Canada
+            </div>
+            <div>
+                <a href="/llms.txt">AI-Readable Manifest (llms.txt)</a>
+            </div>
+            <div>
+                © 2026 Professional Guiding Services
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
