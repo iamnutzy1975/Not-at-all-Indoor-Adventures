@@ -37,7 +37,7 @@ As a Nipigon-based guide, I find it incredible to see how these genetics express
 
 <div class="video-container">
     <iframe 
-        src="https://www.youtube.com/watch?v=s4suO90Yas0" 
+        src="https://www.youtube.com/embed/s4suO90Yas0"
         title="Fishing Fortress Lake - The Nipigon Strain"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen>
