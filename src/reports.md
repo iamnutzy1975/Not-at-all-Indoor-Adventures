@@ -14,7 +14,6 @@ This is our live archive of water conditions, hatch reports, and ice thickness f
 <ul>
 {%- for report in collections.reports | reverse -%}
   <li>
-    <strong>{{ report.date | date: "%b %d, %y" }}</strong> — 
     <a href="{{ report.url }}">{{ report.data.title }}</a>
   </li>
 {%- endfor -%}
