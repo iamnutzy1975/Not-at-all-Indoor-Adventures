@@ -50,16 +50,59 @@ h1, h2, h3 {
   color: #000;
   transform: translateY(-2px);
 }
+
+/* Pulsing 'Book Now' Button */
+[role="button"].pulse-button {
+    animation: pulse-gold 2s infinite;
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+}
+
+@keyframes pulse-gold {
+    0% {
+        transform: scale(0.98);
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
+    }
+    100% {
+        transform: scale(0.98);
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+    }
+}
+
 .video-container {
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     border: 1px solid #333;
 }
 
-/* Hero Header Styling */
+/* Transparent Navigation */
+header.container {
+    background: transparent;
+    border: none;
+    position: absolute; /* Sits on top of the hero */
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+nav ul li a {
+    color: #ffffff !important; /* Forces white links over the image */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    font-weight: 500;
+}
+
+nav ul li strong {
+    color: var(--accent) !important;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+
+/* Adjust Hero Banner for the transparent nav */
 .hero-banner {
     width: 100%;
-    height: 70vh;
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(26,28,30,1)), url('/assets/hero-trout.webp');
+    height: 80vh; /* Slightly taller for more drama */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(26,28,30,1)), url('/assets/hero-trout.webp');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -67,8 +110,8 @@ h1, h2, h3 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: -100px; /* Pulls image up behind the nav if nav is transparent */
-    padding-top: 100px;
+    margin-top: 0; 
+    padding-top: 80px; /* Space for the nav */
 }
 
 .hero-banner h1 {
@@ -79,6 +122,16 @@ h1, h2, h3 {
     border: none;
 }
 
+/* Mobile responsiveness for the Hero text */
+@media (max-width: 768px) {
+    .hero-banner h1 {
+        font-size: 2.2rem;
+    }
+    .hero-banner {
+        height: 60vh; /* Shorter on mobile to get to the content faster */
+    }
+}
+
     </style>
 
 <script type="application/ld+json">
@@ -87,7 +140,7 @@ h1, h2, h3 {
   "@type": "FishingFacility",
   "name": "Not At All Indoor Adventures",
   "description": "Professional trophy Brook Trout, Rainbow Trout, Lake Trout and Large pike guiding services in the Nipigon region.",
-  "url": "https://not-at-all-indoor-adventures.pages.dev",
+  "url": "https://not-at-all-indoor-adventures.ca",
   "telephone": "+1-587-984-1625",
   "address": {
     "@type": "PostalAddress",
@@ -108,10 +161,10 @@ h1, h2, h3 {
 </head>
 <body>
 
-    <header class="container" style="position: relative; z-index: 10;">
+    <header class="container">
         <nav>
             <ul>
-                <li><strong>🌲 Not At All Indoor Adventures</strong></li>
+                <li><strong>Not At All Indoor Adventures</strong></li>
             </ul>
             <ul>
                 <li><a href="/">Home</a></li>
@@ -119,7 +172,7 @@ h1, h2, h3 {
                 <li><a href="/species">Species</a></li>
                 <li><a href="/reports">Reports</a></li>
                 <li><a href="/travel">Travel</a></li> 
-                <li><a href="/contact" role="button">Book Now</a></li>
+                <li><a href="/contact" role="button" class="pulse-button">Book Now</a></li>
             </ul>
         </nav>
     </header>
@@ -127,7 +180,9 @@ h1, h2, h3 {
     {% if page.url == "/" %}
     <section class="hero-banner">
         <h1>Trophy Fishing the North Shore</h1>
-        <p style="color: white; font-size: 1.2rem; text-shadow: 1px 1px 5px #000;">Nipigon River & Lake Superior Guiding</p>
+        <p style="color: white; font-size: 1.3rem; text-shadow: 2px 2px 8px #000; font-weight: 500;">
+            Nipigon River & Lake Superior Guiding
+        </p>
     </section>
     {% endif %}
 

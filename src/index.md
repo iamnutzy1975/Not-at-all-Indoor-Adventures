@@ -3,8 +3,6 @@ layout: layout.njk
 title: Home
 ---
 
-![Nipigon Brook Trout](/assets/hero-trout.webp)
-
 # Trophy Fishing the North Shore
 
 Welcome to **Not At All Indoor Adventures**. I'm Gord, and I specialize in guiding anglers through the legendary waters of the Nipigon region. From the world-record Brook Trout heritage of the Nipigon River to the deep-water giants of Lake Nipigon, this is world-class fishing with a local edge.
