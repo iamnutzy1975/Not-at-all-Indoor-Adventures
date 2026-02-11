@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <meta name="description" content="Professional fishing guide in Nipigon, Ontario. Specializing in Trophy Brook Trout, Lake Trout, and Northern Pike on Lake Superior and the Nipigon River.">
+    <meta property="og:image" content="https://not-at-all-indoor-adventures.ca/assets/hero-trout.webp">
+    <meta name="twitter:card" content="summary_large_image">
+
     <title>{{ title }} | Not At All Indoor Adventures</title>
     
     <meta name="description" content="Expert fishing guiding in Nipigon, Ontario. Specializing in big water fishing adventures for trophy Brook Trout, Rainbow Trout, Lake Trout and Large pike.">
@@ -11,9 +15,41 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
     
     <style>
-        /* Small tweak to make the header stand out without adding bloat */
-        header { border-bottom: 1px solid #e1e1e1; margin-bottom: 2rem; }
-        footer { margin-top: 3rem; padding: 2rem 0; border-top: 1px solid #e1e1e1; font-size: 0.8rem; }
+:root {
+  --primary: #2d5a27; /* Deep Forest Green */
+  --primary-hover: #1e3d1a;
+  --accent: #d4af37; /* Trophy Gold (for buttons/highlights) */
+  --bg-dark: #1a1c1e; /* Deep Water Slate */
+  --text-light: #f8f9fa;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Make headers pop with a metallic "Steelhead" feel */
+h1, h2, h3 {
+  color: #e0e0e0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.5rem;
+}
+
+/* Button sex appeal */
+[role="button"], button {
+  background-color: var(--primary);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+[role="button"]:hover {
+  background-color: var(--accent);
+  color: #000;
+  transform: translateY(-2px);
+}
     </style>
 
 <script type="application/ld+json">
