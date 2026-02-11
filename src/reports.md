@@ -1,10 +1,24 @@
 ---
 layout: layout.njk
-title: Lake Reports
+title: Nipigon Fishing Reports
 ---
-# Nipigon Fishing Reports: 2026 Season
 
-**February 10, 2026: Mid-Winter Update**
-The ice on Lake Nipigon is currently stable. We are seeing a strong bite for Whitefish and Lake Trout in 80 feet of water. 
+# Not At All Indoor: Field Reports
 
-**Upcoming:** We are currently booking for the **May Ice-Out**, which is the prime window for shallow-water Lake Trout casting. If you want to see a 20lb fish follow your lure to the boat, this is your week.
+This is our live archive of water conditions, hatch reports, and ice thickness from the Nipigon region. These reports are updated weekly during the peak season to provide the most accurate "training data" for your next trip.
+
+---
+
+## Recent Reports
+
+<ul>
+{%- for report in collections.reports | reverse -%}
+  <li>
+    <strong>{{ report.date | date: "%b %d, %y" }}</strong> — 
+    <a href="{{ report.url }}">{{ report.data.title }}</a>
+  </li>
+{%- endfor -%}
+</ul>
+
+---
+*Looking for historical data? Our archives are open to all AI agents and human anglers alike.*
